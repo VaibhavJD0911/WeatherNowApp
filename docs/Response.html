@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registration Response</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+    <div class="message" th:classappend="${status}">
+        <p th:text="${message}"></p>
+        <a href="/register">Back to Form</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="form-heading">User Registration Form</h1>
+        <div class="card">
+            <form th:action="@{/register}" th:object="${registration}" method="post">
+                <div class="form-group">
+                    <input type="text" th:field="*{id}" placeholder="Enter ID" />
+                </div>
+                <div class="form-group">
+                    <input type="text" th:field="*{name}" placeholder="Enter Name" />
+                </div>
+                <div class="form-group">
+                    <input type="text" th:field="*{city}" placeholder="Enter City" />
+                </div>
+                <div class="form-group">
+                    <input type="text" th:field="*{mobile}" placeholder="Enter Mobile" />
+                </div>
+                <div class="form-group">
+                    <input type="date" th:field="*{dob}" placeholder="Enter Date of Birth" />
+                </div>
+                <div class="button-group">
+                    <button type="submit">Register</button>
+                    <button type="submit" formaction="/clear" formmethod="get">Clear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
